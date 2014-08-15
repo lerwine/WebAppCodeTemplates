@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vs="http://schemas.microsoft.com/Visual-Studio-Intellisense"
+           elementFormDefault="qualified" attributeFormDefault="unqualified" vs:helpNamespace="http://schemas.microsoft.com/.NetConfiguration/v2.0">
+  <xs:element name="myApp.settings" vs:help="configuration/myApp.settings">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="notificationEmails" type="NotificationEmailsType" vs:help="configuration/myApp.settings/notificationEmails" />
+        <xs:element name="roleGroupMappings" type="RoleGroupMappingsType" vs:help="configuration/myApp.settings/roleGroupMappings" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="NotificationEmailsType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="add" vs:help="configuration/myApp.settings/notificationEmails/add">
+        <xs:complexType>
+          <xs:attribute name="address" type="xs:string" use="required" />
+          <xs:attribute name="displayName" type="xs:string" use="optional" default="" />
+          <xs:attribute name="disabled" type="xs:boolean" use="optional" default="false" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="remove" vs:help="configuration/myApp.settings/notificationEmails/remove">
+        <xs:complexType>
+          <xs:attribute name="address" type="xs:string" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="clear" vs:help="configuration/myApp.settings/notificationEmails/clear">
+        <xs:complexType>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="RoleGroupMappingsType">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element name="add" vs:help="configuration/myApp.settings/roleGroupMappings/add">
+        <xs:complexType>
+          <xs:attribute name="role" type="RoleType" use="required" />
+          <xs:attribute name="adGroupName" type="xs:string" use="optional" default="" />
+          <xs:attribute name="disabled" type="xs:boolean" use="optional" default="false" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="remove" vs:help="configuration/myApp.settings/roleGroupMappings/remove">
+        <xs:complexType>
+          <xs:attribute name="role" type="RoleType" use="required" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="clear" vs:help="configuration/myApp.settings/roleGroupMappings/clear">
+        <xs:complexType>  </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:simpleType name="RoleType">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Deny" />
+          <xs:enumeration value="Reader" />
+          <xs:enumeration value="Customer" />
+          <xs:enumeration value="Auditor" />
+          <xs:enumeration value="Contributor" />
+          <xs:enumeration value="ApplicationAdmin" />
+          <xs:enumeration value="WebsiteAdmin" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:minInclusive value="0" />
+          <xs:maxInclusive value="6" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
+</xs:schema>
