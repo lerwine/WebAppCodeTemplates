@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Configuration;
+
 namespace CustomConfigurationSection
 {
     public class NotificationEmailConfigElement : ConfigurationElement
@@ -30,8 +28,7 @@ namespace CustomConfigurationSection
             }
         }
 
-        [ConfigurationProperty(NotificationEmailConfigElement.ConfigPropertyName_Disabled, IsRequired = false, DefaultValue =
-        NotificationEmailConfigElement.DefaultValue_Disabled)]
+        [ConfigurationProperty(NotificationEmailConfigElement.ConfigPropertyName_Disabled, IsRequired = false, DefaultValue = NotificationEmailConfigElement.DefaultValue_Disabled)]
         public bool Disabled
         {
             get
