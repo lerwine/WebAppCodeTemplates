@@ -15,7 +15,8 @@ namespace CustomConfigurationSection
         {
             get
             {
-                string result = this[NotificationEmailConfigElement.ConfigPropertyName_Address] as string; return (result == null) ? "" : result;
+                string result = this[NotificationEmailConfigElement.ConfigPropertyName_Address] as string; 
+                return (result == null) ? "" : result;
             }
         }
 
@@ -24,7 +25,8 @@ namespace CustomConfigurationSection
         {
             get
             {
-                string result = this[NotificationEmailConfigElement.ConfigPropertyName_DisplayName] as string; return (result == null) ? "" : result;
+                string result = this[NotificationEmailConfigElement.ConfigPropertyName_DisplayName] as string; 
+                return (result == null) ? "" : result;
             }
         }
 
@@ -33,7 +35,8 @@ namespace CustomConfigurationSection
         {
             get
             {
-                return CustomConfigurationSection.GetBestBooleanValue(this[NotificationEmailConfigElement.ConfigPropertyName_Disabled], NotificationEmailConfigElement.DefaultValue_Disabled);
+                return CustomConfigurationSection.GetBestBooleanValue(this[NotificationEmailConfigElement.ConfigPropertyName_Disabled], 
+                    NotificationEmailConfigElement.DefaultValue_Disabled);
             }
         }
     }

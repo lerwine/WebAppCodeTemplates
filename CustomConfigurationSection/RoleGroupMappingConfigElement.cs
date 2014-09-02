@@ -15,7 +15,8 @@ namespace CustomConfigurationSection
         {
             get
             {
-                string result = this[RoleGroupMappingConfigElement.ConfigPropertyName_RoleText] as string; return (result == null) ? "" : result;
+                string result = this[RoleGroupMappingConfigElement.ConfigPropertyName_RoleText] as string;
+                return (result == null) ? "" : result;
             }
         }
 
@@ -55,7 +56,8 @@ namespace CustomConfigurationSection
         {
             get
             {
-                string result = this[RoleGroupMappingConfigElement.ConfigPropertyName_ADGroupName] as string; return (result == null) ? "" : result;
+                string result = this[RoleGroupMappingConfigElement.ConfigPropertyName_ADGroupName] as string;
+                return (result == null) ? "" : result;
             }
         }
 
@@ -64,7 +66,8 @@ namespace CustomConfigurationSection
         {
             get
             {
-                return CustomConfigurationSection.GetBestBooleanValue(this[RoleGroupMappingConfigElement.ConfigPropertyName_Disabled], RoleGroupMappingConfigElement.DefaultValue_Disabled);
+                return CustomConfigurationSection.GetBestBooleanValue(this[RoleGroupMappingConfigElement.ConfigPropertyName_Disabled], 
+                    RoleGroupMappingConfigElement.DefaultValue_Disabled);
             }
         }
     }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AppRole.cs" />
     <Compile Include="CustomConfigurationSection.cs" />
+    <Compile Include="ExtensionMethods\AppRoleExtensions.cs" />
     <Compile Include="NotificationEmailConfigElement.cs" />
     <Compile Include="NotificationEmailElementCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,7 +7,7 @@ namespace TextTemplateCode
 {
     public class TextTemplatingService : IDisposable
     {
-        public void LogErrors(System.CodeDom.Compiler.CompilerErrorCollection){ throw new NotImplementedException(); }
+        public void LogErrors(System.CodeDom.Compiler.CompilerErrorCollection c){ throw new NotImplementedException(); }
         public Boolean LoadIncludeText(System.String a, System.String v, System.String c){ throw new NotImplementedException(); }
         public System.AppDomain ProvideTemplatingAppDomain(System.String a){ throw new NotImplementedException(); }
         public System.String ResolveAssemblyReference(System.String a){ throw new NotImplementedException(); }

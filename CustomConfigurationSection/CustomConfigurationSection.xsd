@@ -44,7 +44,8 @@
         </xs:complexType>
       </xs:element>
       <xs:element name="clear" vs:help="configuration/myApp.settings/roleGroupMappings/clear">
-        <xs:complexType>  </xs:complexType>
+        <xs:complexType>
+        </xs:complexType>
       </xs:element>
     </xs:choice>
   </xs:complexType>
