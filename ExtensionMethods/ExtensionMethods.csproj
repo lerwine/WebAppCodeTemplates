@@ -37,7 +37,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AttributeTypes\AttributeExtensions.cs" />
-    <Compile Include="AttributeTypes\DescriptionAttribute.cs" />
     <Compile Include="AttributeTypes\EnumExtensions.cs" />
     <Compile Include="IEnumerableTypes\EnumeratorForNonIteratingEnumerable.cs" />
     <Compile Include="IEnumerableTypes\NonReiteratingEnumerable.cs" />
