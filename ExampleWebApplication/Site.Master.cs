@@ -9,6 +9,23 @@ namespace Erwine.Leonard.T.ExampleWebApplication
 {
     public partial class SiteMasterPage : System.Web.UI.MasterPage
     {
+        private string _defaultTitle = null;
+
+        public string DefaultTitle
+        {
+            get
+            {
+                if (this._defaultTitle == null)
+                {
+                    System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+                    this._defaultTitle = assembly.GetCustomAttributes(typeof(System.Reflection.AssemblyTitleAttribute), false).OfType<System.Reflection.AssemblyTitleAttribute>()
+                        .Where(a => !String.IsNullOrWhiteSpace(a.Title)).Select(a => a.Title).DefaultIfEmpty(assembly.FullName).First();
+                }
+
+                return this._defaultTitle;
+            }
+        }
+
         public string PageTitle
         {
             get
@@ -49,23 +66,6 @@ namespace Erwine.Leonard.T.ExampleWebApplication
         {
             this.SubHeadingH2.Visible = true;
             this.FooterTextPanel.Visible = true;
-        }
-
-        private string _defaultTitle = null;
-
-        public string DefaultTitle
-        {
-            get
-            {
-                if (this._defaultTitle == null)
-                {
-                    System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-                    this._defaultTitle = assembly.GetCustomAttributes(typeof(System.Reflection.AssemblyTitleAttribute), false).OfType<System.Reflection.AssemblyTitleAttribute>()
-                        .Where(a => !String.IsNullOrWhiteSpace(a.Title)).Select(a => a.Title).DefaultIfEmpty(assembly.FullName).First();
-                }
-
-                return this._defaultTitle;
-            }
         }
 
         protected void TitleTextLiteral_PreRender(object sender, EventArgs e)
