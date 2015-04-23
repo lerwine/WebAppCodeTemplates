@@ -14,7 +14,7 @@ namespace Erwine.Leonard.T.ExampleWebApplication
             get
             {
                 if (String.IsNullOrWhiteSpace(this.PageTitleLiteral.Text))
-                    this.PageTitleLiteral.Text = (String.IsNullOrWhiteSpace(this.Page.Title)) ? this.Page.Title : this.DefaultTitle;
+                    this.PageTitleLiteral.Text = (String.IsNullOrWhiteSpace(this.Page.Title)) ?  this.DefaultTitle : this.Page.Title;
 
                 return this.PageTitleLiteral.Text;
             }
@@ -26,7 +26,7 @@ namespace Erwine.Leonard.T.ExampleWebApplication
             get
             {
                 if (String.IsNullOrWhiteSpace(this.MainHeadingLiteral.Text))
-                    this.MainHeadingLiteral.Text = (String.IsNullOrWhiteSpace(this.Page.Title)) ? this.Page.Title : this.DefaultTitle;
+                    this.MainHeadingLiteral.Text = (String.IsNullOrWhiteSpace(this.Page.Title)) ? this.DefaultTitle : this.Page.Title;
 
                 return this.MainHeadingLiteral.Text;
             }
