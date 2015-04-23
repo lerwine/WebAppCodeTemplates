@@ -1,0 +1,80 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    background-color: white;
+}
+
+table#mainAlignment {
+    border-collapse:collapse;
+    border: 2px ridge #000099; 
+    width: 100%;
+}
+
+th#mainHeadingCell {
+    padding:0;
+    text-align:left;
+    font-weight:normal;
+}
+
+th#mainHeadingCell,
+td#mainMenuCell,
+td#mainFooterCell  {
+    background-color: #000099;
+    color: #FFFF66;
+    padding:0;
+}
+
+th#mainHeadingCell a,
+td#mainMenuCell a,
+td#mainFooterCell a,
+th#mainHeadingCell a:visited,
+td#mainMenuCell a:visited,
+td#mainFooterCell a:visited  {
+    color: White;
+    text-decoration:none;
+}
+
+th#mainHeadingCell a:hover,
+td#mainMenuCell a:hover,
+td#mainFooterCell a:hover,
+th#mainHeadingCell a:active,
+td#mainMenuCell a:active,
+td#mainFooterCell a:active  {
+    background-color: #FFFF66;
+    color: #000099;
+}
+
+td#mainMenuCell,
+td#mainContentCell,
+td#mainFooterCell {
+    vertical-align:top;
+}
+
+h1#HeadingH1 {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: x-large
+}
+
+h2#SubHeadingH2 {
+    font-weight: bold;
+    font-size: larger
+}
+
+.CurrentMainBreadCrumbNode {
+    font-weight: bold;
+}
+
+.MainMenuControl {
+    width:100%;
+}
+
+.MainMenuControlItem {
+    padding: 2px;
+}
+
+.MainMenuControlItemHover {
+    background-color: #FFFF66;
+    color: #000099;
+    border: none;
+}

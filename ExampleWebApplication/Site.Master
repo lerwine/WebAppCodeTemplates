@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Erwine.Leonard.T.ExampleWebApplication.SiteMasterPage" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:Literal ID="PageTitleLiteral" runat="server" Mode="Encode" OnPreRender="TitleTextLiteral_PreRender" /></title>
+    <asp:ContentPlaceHolder ID="HeadContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table id="mainAlignment">
+            <thead>
+                <tr>
+                    <th colspan="2" id="mainHeadingCell">
+                        <h1 id="HeadingH1"><asp:Literal ID="MainHeadingLiteral" runat="server" Mode="Encode" OnPreRender="TitleTextLiteral_PreRender" /></h1>
+                        <h2 id="SubHeadingH2" runat="server" onprerender="SubHeadingH2_PreRender"><asp:Literal ID="SubHeadingLiteral" runat="server" Text="" Mode="Encode" /></h2>
+                        <div id="BreadCrumbDiv">
+                            <asp:ContentPlaceHolder ID="BeforeBreadCrumbContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                            <asp:SiteMapPath ID="BreadCrumbSiteMapPath" runat="server" CssClass="MainBreadCrumb">
+                                <CurrentNodeStyle CssClass="CurrentMainBreadCrumbNode" />
+                            </asp:SiteMapPath>
+                            <asp:ContentPlaceHolder ID="AfterBreadCrumbContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="mainMenuCell">
+                        <asp:ContentPlaceHolder ID="BeforeMenuContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                        <asp:Menu ID="MainMenu" runat="server" DataSourceID="MainSiteMapDataSource" StaticDisplayLevels="2" CssClass="MainMenuControl">
+                            <StaticHoverStyle CssClass="MainMenuControlItemHover" />
+                            <StaticMenuItemStyle CssClass="MainMenuControlItem" />
+                        </asp:Menu>
+                        <asp:SiteMapDataSource ID="MainSiteMapDataSource" runat="server" />
+                        <asp:ContentPlaceHolder ID="AfterMenuContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                    <td id="mainContentCell">
+                        <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" id="mainFooterCell">
+                        <asp:ContentPlaceHolder ID="BeforeFooterTextContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                        <asp:Panel ID="FooterTextPanel" runat="server"><asp:Literal ID="FooterTextLiteral" runat="server" Mode="Encode" OnPreRender="FooterTextLiteral_PreRender" /></asp:Panel>
+                        <asp:ContentPlaceHolder ID="AfterFooterTextContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </form>
+</body>
+</html>
