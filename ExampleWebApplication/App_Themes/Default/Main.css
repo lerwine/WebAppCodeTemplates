@@ -11,28 +11,22 @@ table#mainAlignment {
 }
 
 th#mainHeadingCell {
-    padding:0;
     text-align:left;
     font-weight:normal;
 }
 
 th#mainHeadingCell,
-td#mainMenuCell,
 td#mainFooterCell  {
     background-color: #000099;
     color: #FFFF66;
-    padding:0;
+    padding:8;
 }
 
 td#mainMenuCell  {
-    border-top:2px ridge #000099;
-    border-right:2px ridge #000099;
-    border-bottom:none;
-    border-left:2px ridge #000099;
+    padding:0;
 }
 
 th#mainHeadingCell a,
-td#mainMenuCell a,
 td#mainFooterCell a,
 th#mainHeadingCell a:visited,
 td#mainMenuCell a:visited,
@@ -42,7 +36,6 @@ td#mainFooterCell a:visited  {
 }
 
 th#mainHeadingCell a:hover,
-td#mainMenuCell a:hover,
 td#mainFooterCell a:hover,
 th#mainHeadingCell a:active,
 td#mainMenuCell a:active,
@@ -57,14 +50,21 @@ td#mainFooterCell {
     vertical-align:top;
 }
 
+h1#HeadingH1,
+h2#SubHeadingH2{
+    font-weight: bold;
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 8px;
+}
+
 h1#HeadingH1 {
     color: #FFFFFF;
-    font-weight: bold;
     font-size: x-large
 }
 
 h2#SubHeadingH2 {
-    font-weight: bold;
     font-size: larger
 }
 
@@ -72,8 +72,33 @@ h2#SubHeadingH2 {
     font-weight: bold;
 }
 
-.MainMenuControl {
-    width:100%;
+div.MainMenuControl ul.static {
+    border: 4px outset #000099;
+    background-color: #000099;
+}
+
+div.MainMenuControl li.static {
+    border: 2px outset #000099;
+    color: #FFFF66;
+}
+
+div.MainMenuControl li.static a {
+    color: white;
+}
+
+div.MainMenuControl ul.dynamic {
+    background-color: #CCCCCC;
+    border: 4px ridge black;
+}
+
+div.MainMenuControl li.dynamic {
+    border: 2px groove #000099;
+    color: black;
+    padding: 2px;
+}
+
+div.MainMenuControl li.dynamic a {
+    color: #000066;
 }
 
 .MainMenuControlItemHover {
