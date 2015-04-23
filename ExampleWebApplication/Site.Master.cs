@@ -76,7 +76,7 @@ namespace Erwine.Leonard.T.ExampleWebApplication
                 literal.Text = (String.IsNullOrWhiteSpace(this.Page.Title)) ? this.DefaultTitle : this.Page.Title;
         }
 
-        protected void SubHeadingH2_PreRender(object sender, EventArgs e)
+        protected void SubHeadingLiteral_PreRender(object sender, EventArgs e)
         {
             this.SubHeadingH2.Visible = !String.IsNullOrWhiteSpace(this.SubHeadingLiteral.Text);
         }
