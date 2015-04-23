@@ -13,7 +13,7 @@
                 <tr>
                     <th colspan="2" id="mainHeadingCell">
                         <h1 id="HeadingH1"><asp:Literal ID="MainHeadingLiteral" runat="server" Mode="Encode" OnPreRender="TitleTextLiteral_PreRender" /></h1>
-                        <h2 id="SubHeadingH2" runat="server" onprerender="SubHeadingH2_PreRender"><asp:Literal ID="SubHeadingLiteral" runat="server" Text="" Mode="Encode" /></h2>
+                        <h2 id="SubHeadingH2" runat="server"><asp:Literal ID="SubHeadingLiteral" runat="server" Text="" Mode="Encode" OnPreRender="SubHeadingLiteral_PreRender" /></h2>
                         <div id="BreadCrumbDiv">
                             <asp:ContentPlaceHolder ID="BeforeBreadCrumbContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
                             <asp:SiteMapPath ID="BreadCrumbSiteMapPath" runat="server" CssClass="MainBreadCrumb">
