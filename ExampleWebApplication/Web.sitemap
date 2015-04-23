@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="~/Default.aspx" title="Home"  description="Start page for custom web application.">
-      <siteMapNode url="~/Diagnostics.aspx" title="Diagnostics"  description="Diagnostics page" roles="BUILTIN\Administrators" securityTrimmingEnabled="true">
-        <siteMapNode url="~/Trace.axd" title="Trace output"  description="Diagnostic trace output page" roles="BUILTIN\Administrators" securityTrimmingEnabled="true" />
+    <siteMapNode url="~/Default.aspx" title="Home" description="Start page for custom web application.">
+      <siteMapNode url="~/Diagnostics.aspx" title="Diagnostics" description="Diagnostics page" roles="BUILTIN\Administrators">
+        <siteMapNode url="~/Trace.axd" title="Trace output" description="Diagnostic trace output page" roles="BUILTIN\Administrators" />
       </siteMapNode>
+      <siteMapNode url="~/Create.aspx" title="Add Item" description="Add new item" />
+      <siteMapNode url="~/Read.aspx" title="View Item" description="Add new item" />
+      <siteMapNode url="~/Update.aspx" title="Edit Item" description="Add new item" />
+      <siteMapNode url="~/Delete.aspx" title="Delete Item" description="Add new item" />
     </siteMapNode>
 </siteMap>

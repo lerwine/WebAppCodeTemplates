@@ -112,15 +112,6 @@ namespace Erwine.Leonard.T.ExampleWebApplication {
         protected global::System.Web.UI.WebControls.Menu MainMenu;
         
         /// <summary>
-        /// MainSiteMapDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource MainSiteMapDataSource;
-        
-        /// <summary>
         /// AfterMenuContentPlaceHolder control.
         /// </summary>
         /// <remarks>
@@ -173,5 +164,14 @@ namespace Erwine.Leonard.T.ExampleWebApplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder AfterFooterTextContentPlaceHolder;
+        
+        /// <summary>
+        /// MainSiteMapDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SiteMapDataSource MainSiteMapDataSource;
     }
 }

@@ -24,6 +24,13 @@ td#mainFooterCell  {
     padding:0;
 }
 
+td#mainMenuCell  {
+    border-top:2px ridge #000099;
+    border-right:2px ridge #000099;
+    border-bottom:none;
+    border-left:2px ridge #000099;
+}
+
 th#mainHeadingCell a,
 td#mainMenuCell a,
 td#mainFooterCell a,
@@ -69,12 +76,16 @@ h2#SubHeadingH2 {
     width:100%;
 }
 
-.MainMenuControlItem {
-    padding: 2px;
-}
-
 .MainMenuControlItemHover {
     background-color: #FFFF66;
     color: #000099;
-    border: none;
+}
+
+.MainMenuControlItem,
+.MainMenuControlItemHover {
+    padding: 2px;
+    border-top:none;
+    border-right:none;
+    border-bottom:2px ridge #000099;
+    border-left:none;
 }
