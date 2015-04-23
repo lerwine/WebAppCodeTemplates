@@ -58,20 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Default\Main.css" />
-    <Content Include="Create.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Diagnostics.aspx" />
-    <Content Include="Read.aspx" />
+    <Content Include="Help\Default.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Create.aspx.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Create.aspx.designer.cs">
-      <DependentUpon>Create.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -86,14 +78,14 @@
     <Compile Include="Diagnostics.aspx.designer.cs">
       <DependentUpon>Diagnostics.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Read.aspx.cs">
-      <DependentUpon>Read.aspx</DependentUpon>
+    <Compile Include="Help\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Read.aspx.designer.cs">
-      <DependentUpon>Read.aspx</DependentUpon>
+    <Compile Include="Help\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
