@@ -38,7 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -64,6 +72,36 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects\Db\Application.cs">
+      <DependentUpon>PhotoLockerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Db\ConversionCache.cs">
+      <DependentUpon>PhotoLockerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Db\Folder.cs">
+      <DependentUpon>PhotoLockerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Db\IdentityCache.cs">
+      <DependentUpon>PhotoLockerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Db\Photo.cs">
+      <DependentUpon>PhotoLockerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Db\PhotoLockerData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhotoLockerData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Db\PhotoLockerData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhotoLockerData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\Db\PhotoLockerData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhotoLockerData.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -97,6 +135,24 @@
   <ItemGroup>
     <Content Include="Site.Master" />
     <Content Include="App_Themes\Default\Main.skin" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="BusinessObjects\Db\PhotoLockerData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PhotoLockerData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BusinessObjects\Db\PhotoLockerData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhotoLockerData.edmx</DependentUpon>
+      <LastGenOutput>PhotoLockerData.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BusinessObjects\Db\PhotoLockerData.edmx.diagram">
+      <DependentUpon>PhotoLockerData.edmx</DependentUpon>
+    </Content>
+    <Content Include="BusinessObjects\Db\PhotoLockerData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhotoLockerData.edmx</DependentUpon>
+      <LastGenOutput>PhotoLockerData.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -105,8 +161,9 @@
     </None>
     <Content Include="Web.sitemap" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BusinessObjects\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
