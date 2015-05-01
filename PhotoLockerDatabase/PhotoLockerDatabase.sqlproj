@@ -76,6 +76,7 @@
     <None Include="Test\IdentityCacheTest.sql" />
     <None Include="Test\TestCleanup.sql" />
     <None Include="Test\ADSITest.sql" />
+    <None Include="DbToProjectSchemaCompare.scmp" />
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="EnableADSI.sql" />
