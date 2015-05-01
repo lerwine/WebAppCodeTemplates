@@ -1,15 +1,21 @@
 ﻿CREATE TABLE [dbo].[IdentityCache] (
-    [Id]           UNIQUEIDENTIFIER CONSTRAINT [DF_IdentityCache_Id] DEFAULT (newid()) ROWGUIDCOL NOT NULL,
-    [ObjectGuid]   UNIQUEIDENTIFIER NOT NULL,
-    [SID]          NVARCHAR (1024)  NOT NULL,
-    [Domain]       NVARCHAR (256)   NOT NULL,
-    [Account]      NVARCHAR (256)   NOT NULL,
-    [DisplayName]  NVARCHAR (256)   NOT NULL,
-    [EmailAddress] NVARCHAR (1024)  NULL,
-    [CreatedOn]    DATETIME         NOT NULL,
-    [VerifiedOn]   DATETIME         NOT NULL,
+    [Id]                  UNIQUEIDENTIFIER CONSTRAINT [DF_IdentityCache_Id] DEFAULT (newid()) NOT NULL,
+    [ObjectGuid]          UNIQUEIDENTIFIER NOT NULL,
+    [SID]                 VARBINARY (85)   NOT NULL,
+    [LoginName]           NVARCHAR (128)   NOT NULL,
+    [DisplayName]         NVARCHAR (256)   NOT NULL,
+    [EmailAddress]        NVARCHAR (1024)  NULL,
+    [CreatedOn]           DATETIME         NOT NULL,
+    [CreatedByLoginName]  NVARCHAR (128)   NOT NULL,
+    [CreatedBySID]        VARBINARY (85)   NOT NULL,
+    [VerifiedOn]          DATETIME         NOT NULL,
+    [ModifiedOn]          DATETIME         NOT NULL,
+    [ModifiedByLoginName] NVARCHAR (128)   NOT NULL,
+    [ModifiedBySID]       VARBINARY (85)   NOT NULL,
     CONSTRAINT [PK_IdentityCache] PRIMARY KEY CLUSTERED ([Id] ASC)
 );
+
+
 
 
 GO
@@ -44,7 +50,7 @@ GO
 -- Description:	Enforces field value rules
 -- =============================================
 CREATE TRIGGER [dbo].[trig_AlterIdentityCache] 
-   ON  [dbo].[IdentityCache]
+   ON  dbo.IdentityCache
    AFTER UPDATE
 AS 
 BEGIN
@@ -74,14 +80,8 @@ BEGIN
 		RETURN
 	END
 
-	IF EXISTS (SELECT * FROM inserted LEFT JOIN deleted ON inserted.Id = deleted.Id WHERE inserted.Domain <> deleted.Domain) BEGIN
-		RAISERROR('Domain cannot be modified', 12, 1);
-		ROLLBACK TRANSACTION;
-		RETURN
-	END
-
-	IF EXISTS (SELECT * FROM inserted LEFT JOIN deleted ON inserted.Id = deleted.Id WHERE inserted.Account <> deleted.Account) BEGIN
-		RAISERROR('Account cannot be modified', 12, 1);
+	IF EXISTS (SELECT * FROM inserted LEFT JOIN deleted ON inserted.Id = deleted.Id WHERE inserted.LoginName <> deleted.LoginName) BEGIN
+		RAISERROR('Login Name cannot be modified', 12, 1);
 		ROLLBACK TRANSACTION;
 		RETURN
 	END

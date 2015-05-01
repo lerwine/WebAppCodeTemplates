@@ -62,6 +62,7 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Functions\" />
+    <Folder Include="Test" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\IdentityCache.sql" />
@@ -70,5 +71,13 @@
     <Build Include="dbo\Tables\ConversionCache.sql" />
     <Build Include="dbo\Tables\Folder.sql" />
     <Build Include="dbo\Functions\IsDescendentOf.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Test\IdentityCacheTest.sql" />
+    <None Include="Test\TestCleanup.sql" />
+    <None Include="Test\ADSITest.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="EnableADSI.sql" />
   </ItemGroup>
 </Project>
