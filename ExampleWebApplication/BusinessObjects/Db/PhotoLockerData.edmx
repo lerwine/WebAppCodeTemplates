@@ -314,7 +314,7 @@
           <Property Name="Width" Type="Int32" Nullable="false" />
           <Property Name="Height" Type="Int32" Nullable="false" />
           <Property Name="Format" Type="Int32" Nullable="false" />
-          <Property Name="MetaData" Type="Binary" Nullable="false" />
+          <Property Name="MetaData" Type="String" Nullable="false" />
           <Property Name="ConvertedOn" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ConvertedBy" Type="Guid" Nullable="false" />
           <Property Name="ExpiresOn" Type="DateTime" Precision="3" />
@@ -332,7 +332,7 @@
           <Property Name="ParentId" Type="Guid" />
           <Property Name="ApplicationId" Type="Guid" Nullable="false" />
           <Property Name="IsPublic" Type="Boolean" Nullable="false" />
-          <Property Name="MetaData" Type="Binary" Nullable="false" />
+          <Property Name="MetaData" Type="String" Nullable="false" />
           <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedBy" Type="Guid" Nullable="false" />
           <Property Name="ModfiedOn" Type="DateTime" Nullable="false" Precision="3" />
@@ -380,7 +380,7 @@
           <Property Name="Width" Type="Int32" Nullable="false" />
           <Property Name="Height" Type="Int32" Nullable="false" />
           <Property Name="Format" Type="Int32" Nullable="false" />
-          <Property Name="MetaData" Type="Binary" Nullable="false" />
+          <Property Name="MetaData" Type="String" Nullable="false" />
           <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="CreatedBy" Type="Guid" Nullable="false" />
           <Property Name="ModfiedOn" Type="DateTime" Nullable="false" Precision="3" />

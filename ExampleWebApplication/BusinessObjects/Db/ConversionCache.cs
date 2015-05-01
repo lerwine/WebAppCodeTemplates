@@ -20,7 +20,7 @@ namespace Erwine.Leonard.T.ExampleWebApplication.BusinessObjects.Db
         public int Width { get; set; }
         public int Height { get; set; }
         public int Format { get; set; }
-        public byte[] MetaData { get; set; }
+        public string MetaData { get; set; }
         public System.DateTime ConvertedOn { get; set; }
         public System.Guid ConvertedBy { get; set; }
         public Nullable<System.DateTime> ExpiresOn { get; set; }

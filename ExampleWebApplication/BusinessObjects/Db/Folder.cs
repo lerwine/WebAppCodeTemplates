@@ -27,7 +27,7 @@ namespace Erwine.Leonard.T.ExampleWebApplication.BusinessObjects.Db
         public Nullable<System.Guid> ParentId { get; set; }
         public System.Guid ApplicationId { get; set; }
         public bool IsPublic { get; set; }
-        public byte[] MetaData { get; set; }
+        public string MetaData { get; set; }
         public System.DateTime CreatedOn { get; set; }
         public System.Guid CreatedBy { get; set; }
         public System.DateTime ModfiedOn { get; set; }
