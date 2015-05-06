@@ -52,6 +52,9 @@
       <Link>ExtensionMethods\StringExtensions.cs</Link>
     </Compile>
     <Compile Include="CustomTraceManagerModule.cs" />
+    <Compile Include="EvenInfoBase.cs" />
+    <Compile Include="ExceptionDetail.cs" />
+    <Compile Include="ExceptionEventInfo.cs" />
     <Compile Include="ExtensionMethods\DescriptionExtensions.cs" />
     <Compile Include="ExtensionMethods\TraceEventTypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

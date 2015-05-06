@@ -17,7 +17,6 @@ namespace Erwine.Leonard.T.LoggingModule
         Lifecycle_Application_PostAuthorizeRequest,
         Lifecycle_Application_AcquireRequestState,
         Lifecycle_Application_PostAcquireRequestState,
-        Lifecycle_Session_Start,
         Lifecycle_Application_PreRequestHandlerExecute,
         Lifecycle_Page_PreInit,
         Lifecycle_Control_Init,
