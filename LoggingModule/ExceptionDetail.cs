@@ -6,7 +6,7 @@ namespace Erwine.Leonard.T.LoggingModule
 {
     [Serializable]
     [XmlRoot("Exception")]
-    public class ExceptionDetail : EvenInfoBase
+    public class ExceptionDetail : EventInfoBase
     {
         [XmlAttribute("Type")]
         public string ExceptionType { get; set; }

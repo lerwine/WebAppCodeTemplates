@@ -1,11 +1,13 @@
 ﻿using System.IO;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Xml.Serialization;
 
 namespace Erwine.Leonard.T.LoggingModule
 {
-    public abstract class EvenInfoBase
+    public abstract class EventInfoBase
     {
         public override string ToString()
         {

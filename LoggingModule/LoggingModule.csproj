@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -52,17 +53,20 @@
       <Link>ExtensionMethods\StringExtensions.cs</Link>
     </Compile>
     <Compile Include="CustomTraceManagerModule.cs" />
-    <Compile Include="EvenInfoBase.cs" />
+    <Compile Include="EventInfoBase.cs" />
     <Compile Include="ExceptionDetail.cs" />
     <Compile Include="ExceptionEventInfo.cs" />
     <Compile Include="ExtensionMethods\DescriptionExtensions.cs" />
     <Compile Include="ExtensionMethods\TraceEventTypeExtensions.cs" />
+    <Compile Include="ExtensionMethods\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="TraceDataObject.cs" />
+    <Compile Include="TraceDataSerializer.cs" />
     <Compile Include="TraceEventId.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Erwine.Leonard.T.ExampleWebApplication.RepositoryCatalog" CodeBehind="RepositoryCatalog.svc.cs" %>
