@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace Erwine.Leonard.T.LoggingModule
 {
-    [XmlEnum("EventID")]
+    [XmlRoot("EventID")]
     public enum TraceEventId
     {
         [Description("Other Event or Event ID Unknown.")]
