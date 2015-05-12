@@ -1,16 +1,14 @@
-﻿using Erwine.Leonard.T.LoggingModule.ExtensionMethods;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using Erwine.Leonard.T.LoggingModule.ExtensionMethods;
 
 namespace Erwine.Leonard.T.LoggingModule
 {
