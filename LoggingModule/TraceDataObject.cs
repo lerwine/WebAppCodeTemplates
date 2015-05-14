@@ -178,6 +178,8 @@ namespace Erwine.Leonard.T.LoggingModule
                         writer.WriteEndElement();
                         writer.WriteEndDocument();
                     }
+                    
+                    writer.Flush();
                 }
 
                 ms.Seek(0L, SeekOrigin.Begin);
