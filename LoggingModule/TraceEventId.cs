@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using System.ComponentModel;
+using System.Xml.Serialization;
 
 namespace Erwine.Leonard.T.LoggingModule
 {
+    [XmlRoot("EventID")]
     public enum TraceEventId
     {
         [Description("Other Event or Event ID Unknown.")]
